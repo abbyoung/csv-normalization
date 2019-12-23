@@ -7,6 +7,7 @@ Normalize is a python script that reads a CSV formatted file on `stdin` and emit
 ### Requirements
 
 * Python 3
+* macOS 10.13
 
 ### Steps
 
