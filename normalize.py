@@ -1,12 +1,7 @@
 import csv
-import time
 import sys
-import os
 import datetime 
 import pytz
-
-#TODO
-# Unicdoe replacement characters, if not proper unicode
 
 def convert_timestamp(time):
     pst_tz = pytz.timezone("US/Pacific")
@@ -17,9 +12,6 @@ def convert_timestamp(time):
     date_time_obj = pst_tz.localize(date_time_obj)
     # Return data as EST timezone and in ISO-8601 format
     return date_time_obj.astimezone(est_tz).isoformat()
-
-def format_address(address):
-    return address
 
 def format_zip(zipcode):
     return '{0:0>5}'.format(zipcode)
@@ -62,7 +54,6 @@ def read_csv():
         except:
             sys.stderr.write('Warning: Row %d cannot be processed. Proceeding with remaining rows.\n' % (i+1))
     
-
 def main():
     read_csv()
 
